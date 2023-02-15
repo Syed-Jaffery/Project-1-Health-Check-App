@@ -9,21 +9,56 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Project CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 
+  <header class="header overlay">
+
+    <nav class="d-flex justify-content-center">
+      <img class="logo" src="./Images/Health Check logo.png" alt="logo">
+    </nav>
+  </header>
+
+  <!-- Data Submission Form -->
+  <div class="form">
+    <form class="form" action=" ">
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="0" max="80" step="1" autofocus> <br><br>
+
+
+      <label for="weight">Weight (Kg)</label>
+      <input type="number" id="weight" name="weight" min="40" max="160" step="1"><br><br>
+
+
+      <label for="height">Height (cm)</label>
+      <input type="number" id="height" name="age" min="130" max="230" step="1"><br><br>
+
+      <input id="submitBtn" type="submit" value="Submit">
+
+    </form>
+    <div class="results">
+
+      <h1>Results</h1>
+    </div>
+
+  </div>
 
 
 
 
 
-  <script src="index.js"></script>
+  <!-- Bootstrap script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+
+  <!-- Project script -->
+  <script src="index.js"></script>
 </body>
 
 </html>
