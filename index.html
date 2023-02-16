@@ -16,33 +16,36 @@
 <body>
 
 
-  <header class="header overlay">
+  <header class="header">
 
-    <nav class="d-flex justify-content-center">
-      <img class="logo" src="./Images/Health Check logo.png" alt="logo">
+    <nav class="d-flex justify-content-start logo">
+      <img src="./Images/BMI Calculator.png" height="100" width="100" alt="logo">
     </nav>
+    <h1>Text overlay</h1>
+    <a href="#form">click Here</a>
   </header>
 
   <!-- Data Submission Form -->
-  <div class="form">
+  <div id="form" class=" container-fluid pt-4 d-flex justify-content-around bg-dark-subtle">
     <form class="form" action=" ">
 
       <label for="age">Age</label>
-      <input type="number" id="age" name="age" min="0" max="80" step="1" autofocus> <br><br>
+      <input type="number" id="ageValue" name="age" min="18" max="80" step="1" autofocus required> <br><br>
 
 
-      <label for="weight">Weight (Kg)</label>
-      <input type="number" id="weight" name="weight" min="40" max="160" step="1"><br><br>
+      <label for="weight">Weight (kg)</label>
+      <input type="number" id="weightValue" name="weight" min="40" max="160" step="1" required><br><br>
 
 
       <label for="height">Height (cm)</label>
-      <input type="number" id="height" name="age" min="130" max="230" step="1"><br><br>
+      <input type="number" id="heightValue" name="height" min="130" max="230" step="1" required><br><br>
 
-      <input id="submitBtn" type="submit" value="Submit">
-
+      <div class="buttons d-flex justify-content-around m-md-4">
+        <input id="calcBtn" type="button" value="Calculate"><br><br>
+        <input id="resetLink" type="submit" value="Clear">
+      </div>
     </form>
     <div class="results">
-
       <h1>Results</h1>
     </div>
 

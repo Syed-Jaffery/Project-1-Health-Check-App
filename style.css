@@ -5,29 +5,27 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.header {
-  background-image: url(./Images/Marathon.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
-}
-.logo {
-  /* background-color: red; */
-}
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: white;
 }
-/* .overlay { */
-/* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
+.header {
+  background-image: url(./Images/Marathon.jpg);
+  /* background: rgba(rgb(63, 62, 62, 0.2); */
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  width: 100%;
-  background-color: rgba(158, 30, 30, 0.8);
-  z-index: -100;
-} */
+  width: 100vw;
+}
+.logo {
+  margin-left: 20px;
+  padding-top: 20px;
+}
 
 input[type='number'] {
   width: 250px;
@@ -35,27 +33,61 @@ input[type='number'] {
   /* padding: ; */
   border: 1px solid blue;
   border-radius: 3px;
-  background-color: gray;
+  background-color: hsl(300, 100%, 50%);
   color: white;
   font-size: 20px;
   font-weight: bold;
   box-shadow: ;
 }
 
-input[type='submit'] {
-  width: 250px;
-  /* margin: ; */
+input[type='number']:hover {
+  background-color: hsl(300, 100%, 30%);
+}
+
+label {
+  width: 125px;
+  display: inline-block;
+}
+
+#calcBtn {
+  width: 100px;
+  /* margin-left:; */
   /* padding: ; */
-  border: 3px solid red;
+  border: 3px solid black;
   border-radius: 3px;
-  background-color: aqua;
+  background-color: hsl(200, 100%, 50%);
   color: white;
   font-size: 20px;
   font-weight: bold;
   box-shadow: ;
+}
+
+#calcBtn:hover {
+  background-color: hsl(200, 100%, 30%);
 }
 
 input:focus {
-  background-color: yellow;
+  background-color: hsl(300, 100%, 30%);
   border: 8px solid green;
+}
+
+#resetLink {
+  width: 100px;
+  border: none;
+  background-color: transparent;
+  color: black;
+  text-decoration: underline;
+}
+
+#resetLink:hover {
+  background-color: hsl(200, 100%, 30%);
+  color: white;
+}
+
+label:after {
+  content: '*';
+}
+
+#form {
+  height: 400px;
 }
