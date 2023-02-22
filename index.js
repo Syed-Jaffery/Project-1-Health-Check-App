@@ -33,9 +33,9 @@ const weightValue = document.getElementById('weightValue');
 const heightValue = document.getElementById('heightValue');
 const bmiBtn = document.getElementById('bmi-btn');
 
-let bmiResult = document.getElementById('bmi-result');
-let bmiCatergory = document.getElementById('bmi-catergory');
-let previousResult = document.getElementById('previous-result');
+const bmiResult = document.getElementById('bmi-result');
+const bmiCategory = document.getElementById('bmi-category');
+const previousResult = document.getElementById('previous-result');
 
 bmiBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -47,8 +47,16 @@ bmiBtn.addEventListener('click', (e) => {
 
   fetch(queryURL, options)
     .then((response) => response.json())
-    .then((json) => console.log(json))
+    .then((json) => {
+      let bmi = json.data.bmi;
+      let health = json.data.health;
+
+      bmiResult.innerHTML = bmi;
+      bmiCategory.innerHTML = health;
+    })
     .catch((err) => console.error(err));
+
+  // previousResult.innerHTML = catergoryData;
 });
 
 // // clear button
