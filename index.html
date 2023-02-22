@@ -6,54 +6,195 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Health Check</title>
+  <script src="https://kit.fontawesome.com/33bb234198.js" crossorigin="anonymous"></script>
   <!-- Bootstrap CSS -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
   <!-- Project CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Header ---------------------------------------------- -->
 
-  <header class="header">
+  <Header class=" container-fluid header">
 
-    <nav class="d-flex justify-content-start logo">
-      <img src="./Images/BMI Calculator.png" height="100" width="100" alt="logo">
-    </nav>
-    <h1>Text overlay</h1>
-    <a href="#form">click Here</a>
-  </header>
-
-  <!-- Data Submission Form -->
-  <div id="form" class=" container-fluid pt-4 d-flex justify-content-around bg-dark-subtle">
-    <form class="form" action=" ">
-
-      <label for="age">Age</label>
-      <input type="number" id="ageValue" name="age" min="18" max="80" step="1" autofocus required> <br><br>
-
-
-      <label for="weight">Weight (kg)</label>
-      <input type="number" id="weightValue" name="weight" min="40" max="160" step="1" required><br><br>
-
-
-      <label for="height">Height (cm)</label>
-      <input type="number" id="heightValue" name="height" min="130" max="230" step="1" required><br><br>
-
-      <div class="buttons d-flex justify-content-around m-md-4">
-        <input id="calcBtn" type="button" value="Calculate"><br><br>
-        <input id="resetLink" type="submit" value="Clear">
+    <div
+      class=" overlay container col-5 mask text-light d-flex justify-content-center flex-column text-center align-items-center"
+      style="background-color: rgba(0, 0, 0, 0.2)">
+      <h4>Are you in the healthy-weight range?</h4>
+      <p class="m-0">Find out quickly and easily</p>
+      <div><br>
+        <button><a class="btn" href="#bmi-form">BMI check</a></button>
+        <button><a class="btn" href="#weight-form">Ideal Weight check</a> </button>
       </div>
-    </form>
-    <div class="results">
-      <h1>Results</h1>
     </div>
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-xxl">
+        <!-- logo -->
+        <a href="#header" class="navbar-brand logo py-2 px-2">
+          <span class="fw-bold">
+            Health Check
+          </span>
+        </a>
 
-  </div>
+        <!-- toggle button for mobile nav ------------------------>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links------------------------------------------------------>
+        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-decoration-underline" href="#bmi-form">
+                <small>BMI Check</small>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-decoration-underline" href="#weight-form"><small>Ideal Weight Check</small> </a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+  </Header>
+  <!-- BMI section----------------------------------- -->
+  <Section id="bmi-form">
+    <div id="form1" class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h2 class="text-center section-title">Body Mass Index (BMI)</h2>
+          <p class="text text-center">BMI is a standard and widely used method to estimate total body fat</p>
+
+          <div class="row">
+            <div class="col-3">
+              <form class="form" action=" ">
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="80" step="1" autofocus required> <br>
+
+
+                <label for="weight">Weight <small>(kg)</small></label>
+                <input type="number" id="weight" name="weight" min="40" max="160" step="1" required><br>
+
+
+                <label for="height">Height <small>(cm)</small></label>
+                <input type="number" id="height" name="height" min="130" max="230" step="1" required><br><br>
+
+                <div>
+                  <button id="bmiBtn" class="btn">Calculate</button>
+                  <button id="clear-btn" class="clear-btn">Clear</button>
+                </div>
+              </form><br>
+            </div>
+            <div id="bmi-results" class="col-2 ms-5 ps-5">
+              <h3 class="sub-heading">Results</h3>
+              <p class="bmi-result">BMI: </p>
+              <p class="bmi-catergory">Catergory:</p>
+              <p class="previous-result">Previous Result:</p>
+              <img src="/Images/Body-Mass-Index transparent.webp" width=150 alt="BMI range">
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="box text-center mt-2 mb-2 py-2">
+            <h5>Weight loss starts with a healthy diet</h5>
+            <p><span><a class="click-link" href="">CLICK HERE</a></span> to get our FREE guide to making healthy food
+              choices</p>
+          </div>
+        </div>
+        <div class="col-md-6 image1">
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+  </Section>
+
+  <!-- Ideal weight section------------------------ -->
+
+  <section id="weight-form">
+
+    <div id="form2" class=" container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-6 image2"></div>
+        <div class="col-md-6">
+          <h2 class="section-title text-center">Ideal Body Weight</h2><br>
+
+          <div class="row">
+            <div class="col-3">
+              <form class="form" action=" ">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select> <br><br>
+
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" name="height" min="130" max="230" step="1" required>
+                <br><br>
+
+                <div class="buttons">
+                  <button id="weightBtn" class="btn">Calculate</button>
+                  <button id="clear-btn" class="clear-btn">Clear</button>
+                </div>
+              </form>
+
+            </div>
+
+
+
+            <div id="weight-results" class="col-2 ms-5 ps-5">
+              <h5 class="sub-heading">Results</h5>
+              <p>Ideal Weight:</p>
+              <p>Range:</p>
+            </div>
+          </div>
+          <br>
+          <div class="box text-center mb-2 py-2">
+            <h5>Let our professional trainers help you get fitter</h5>
+            <p> <span><a class="click-link" href="">CLICK HERE</a></span> to get our FREE home-based training plan to
+              getting fitter and stronger at any age</p>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
 
 
 
 
+
+
+
+
+
+
+
+  <button onclick="topFunction()" id="myBtn" class="btn-danger btn-floating btn-lg" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <footer>
+    <div id="footer" class="container-fluid d-flex justify-content-center align-items-center pt-3">
+      <p>Created by the Health Check Team </p>
+    </div>
+  </footer>
 
   <!-- Bootstrap script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
