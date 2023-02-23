@@ -1,3 +1,5 @@
+// Scroll to top
+
 // Get the button:
 let mybutton = document.getElementById('myBtn');
 
@@ -20,6 +22,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// API 1 - BMI
+
 const options = {
   method: 'GET',
   headers: {
@@ -35,7 +39,21 @@ const bmiBtn = document.getElementById('bmi-btn');
 
 const bmiResult = document.getElementById('bmi-result');
 const bmiCategory = document.getElementById('bmi-category');
-const previousResult = document.getElementById('previous-result');
+const previousBmi = document.getElementById('previous-bmi');
+const previousCategory = document.getElementById('previous-category');
+
+renderLastValues();
+
+function renderLastValues() {
+  let bmi = localStorage.getItem('bmi');
+  let health = localStorage.getItem('health');
+
+  if (bmi === null || health === null) {
+    return;
+  }
+  previousBmi.textContent = bmi;
+  previousCategory.textContent = health;
+}
 
 bmiBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -53,18 +71,14 @@ bmiBtn.addEventListener('click', (e) => {
 
       bmiResult.innerHTML = bmi;
       bmiCategory.innerHTML = health;
+
+      localStorage.setItem('bmi', bmi);
+      localStorage.setItem('health', health);
     })
     .catch((err) => console.error(err));
-
-  // previousResult.innerHTML = catergoryData;
 });
 
-//  let formOne = document.getElementById('formOne');
-
-//  clearBmiBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-
-// });
+// API 2 - Ideal Weight
 
 const genderValue = document.getElementById('genderValue');
 const ibwHeightValue = document.getElementById('ibwHeightValue');
@@ -91,14 +105,6 @@ weightBtn.addEventListener('click', (e) => {
     })
     .catch((err) => console.error(err));
 });
-
-// clearWeightBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   function clearWeightForm() {
-//     document.getElementById('form2').reset();
-//     return;
-//   }
-// });
 
 function reload() {
   window.location.reload();
