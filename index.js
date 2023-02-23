@@ -76,6 +76,16 @@ weightBtn.addEventListener('click', (e) => {
 
   fetch(queryURL, options)
     .then((response) => response.json())
-    .then((json) => console.log(json))
+    .then((json) => {
+      let hamwiWeight = json.data.Hamwi;
+      let devineWeight = json.data.Devine;
+      let millerWeight = json.data.Miller;
+      let robinsonWeight = json.data.Robinson;
+
+      hamwi.innerHTML = hamwiWeight;
+      devine.innerHTML = devineWeight;
+      miller.innerHTML = millerWeight;
+      robinson.innerHTML = robinsonWeight;
+    })
     .catch((err) => console.error(err));
 });

@@ -256,3 +256,11 @@ font-size: 25px;
 #bmi-result, #bmi-category, #previouse-result {
   color: coral;
 }
+
+#hamwi, #devine, #miller, #robinson  {
+  color: coral;
+}
+
+#range {
+  line-height: 0.5em;
+}
