@@ -261,6 +261,11 @@ font-size: 25px;
   color: coral;
 }
 
+#resultsHeading {
+  line-height: 0.3em;
+}
 #range {
-  line-height: 0.5em;
+  line-height: 0.7em;
+  margin-top: 2em;
+  
 }

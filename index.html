@@ -64,7 +64,7 @@
   </Header>
   <!-- BMI section----------------------------------- -->
   <Section id="bmi-form">
-    <div id="form1" class="container-fluid">
+    <div id="formOne" class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-md-6">
           <h2 class="text-center section-title">Body Mass Index (BMI)</h2>
@@ -87,7 +87,7 @@
 
                 <div>
                   <button id="bmi-btn" class="btn">Calculate</button>
-                  <button id="clear-btn" class="clear-btn">Clear</button>
+                  <button type="reset" onclick="reload()" id="clearBmiBtn" class="clear-btn">Clear</button>
                 </div>
               </form><br>
             </div>
@@ -124,7 +124,7 @@
 
   <section id="weight-form">
 
-    <div id="form2" class=" container-fluid">
+    <div class=" container-fluid">
       <div class="row justify-content-center">
         <div class="col-md-6 image2"></div>
         <div class="col-md-6">
@@ -132,7 +132,7 @@
 
           <div class="row">
             <div class="col-3">
-              <form class="form" action=" ">
+              <form id="form2" class="form" action=" ">
 
                 <label for="gender">Gender</label>
                 <select name="gender" id="genderValue" required>
@@ -146,7 +146,7 @@
 
                 <div class="buttons">
                   <button id="weightBtn" class="btn">Calculate</button>
-                  <button id="clear-btn" class="clear-btn">Clear</button>
+                  <button type="reset" onclick="reload()" id="clearWeightBtn" class="clear-btn">Clear</button>
                 </div>
               </form>
 
@@ -156,12 +156,16 @@
 
             <div id="weight-results" class="col-2 ms-5 ps-5">
               <h5 class="sub-heading">Results</h5>
+
+              <div id="resultsHeading">
+                Ideal Weight Range<small>(kg)</small></p>
+                <small>(based on 4 popular formulas)</small>
+              </div>
               <div id="range">
-                <p>Ideal Weight Range <small>(kg)</small></p>
-                <p>Hamwi: &nbsp;&nbsp;<span id="hamwi"></span></p>
-                <p>Devine: &nbsp;&nbsp;<span id="devine"></span></p>
-                <p>Miller: &nbsp;&nbsp;<span id="miller"></span></p>
-                <p>Robinson: &nbsp;&nbsp;<span id="robinson"></span></p>
+                <p class="mt-2">1. Hamwi: &nbsp;&nbsp;<span id="hamwi"></span></p>
+                <p>2. Devine: &nbsp;&nbsp;<span id="devine"></span></p>
+                <p>3. Miller: &nbsp;&nbsp;<span id="miller"></span></p>
+                <p>4. Robinson: &nbsp;&nbsp;<span id="robinson"></span></p>
               </div>
             </div>
           </div>

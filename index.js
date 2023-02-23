@@ -59,10 +59,12 @@ bmiBtn.addEventListener('click', (e) => {
   // previousResult.innerHTML = catergoryData;
 });
 
-// // clear button
-// function clear() {
-//   window.location.clear();
-// }
+//  let formOne = document.getElementById('formOne');
+
+//  clearBmiBtn.addEventListener('click', (e) => {
+//   e.preventDefault();
+
+// });
 
 const genderValue = document.getElementById('genderValue');
 const ibwHeightValue = document.getElementById('ibwHeightValue');
@@ -89,3 +91,15 @@ weightBtn.addEventListener('click', (e) => {
     })
     .catch((err) => console.error(err));
 });
+
+// clearWeightBtn.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   function clearWeightForm() {
+//     document.getElementById('form2').reset();
+//     return;
+//   }
+// });
+
+function reload() {
+  window.location.reload();
+}
