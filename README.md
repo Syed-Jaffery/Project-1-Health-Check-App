@@ -4,7 +4,7 @@
 
 Visit website (https://syed-jaffery.github.io/Project-1-Health-Check-App/)
 
-![website image](https://syed-jaffery.github.io/Project-1-Health-Check-App/)
+![website image](https://github.com/Syed-Jaffery/Project-1-Health-Check-App/blob/main/Images/website.png)
 
 ## Description
 
