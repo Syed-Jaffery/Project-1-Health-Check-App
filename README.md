@@ -2,9 +2,9 @@
 
 ## Health Check App
 
-Visit website ()
+Visit website (https://syed-jaffery.github.io/Project-1-Health-Check-App/)
 
-![website image]()
+![website image](https://syed-jaffery.github.io/Project-1-Health-Check-App/)
 
 ## Description
 
